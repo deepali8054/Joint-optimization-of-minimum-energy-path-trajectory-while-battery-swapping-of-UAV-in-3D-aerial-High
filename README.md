@@ -38,31 +38,30 @@ The energy consumption of the H-UAV consists of two types: Propulsion(flying) en
 
 Blade profile power, parasite power, and induced power are needed to overcome the profile drag of the blades, the fuselage drag, the induced drag of the blades, respectively.  
 The flying energy of H-UAV from Ho to wi is given by:   
-Efly(oi)=Pfly(Vmax) . t(oi)                                                   (1)   
+Efly(oi)=Pfly(Vmax) . t(oi)                                                    
 The flying energy of H-UAV from wi to wj is given by:    
-Efly(ij)= Pfly(Vo) . ts                                                       (2)   
+Efly(ij)= Pfly(Vo) . ts                                                        
 This is the fixed energy.    
 The mechanical swapping energy of H-UAV from wi to wj is assumed to be constant (Eswap).      
-Eswap= Pswap(Vo) . ts                                                         (3)   
+Eswap= Pswap(Vo) . ts                                                         
 The flying energy of H-UAV from wj to Ho is given by:
-Efly(jo)=Pfly(Vmax) . t(jo)                                                   (4)
+Efly(jo)=Pfly(Vmax) . t(jo)                                                   
 So, the total energy consumption by the H-UAV during its journey is expressed as:    
-Etotal(consumed) = Efly(oi)+ Efly(ij)+ Eswap + Efly(jo)                       (5)
+Etotal(consumed) = Efly(oi)+ Efly(ij)+ Eswap + Efly(jo)                      
 
 ## II. Energy-Efficient H-UAV with Path & Time optimization  
 
 Minimum energy consumption by H-UAV is determined by optimizing the mission time of H-UAV. We have assumed that the H-UAV flies at vmax from Ho to wi and while returning from wj to Ho it flies back to the port at the speed of Vmax.   
-The formulation of the problem with certain constraints are:     
-P1: Min Σ(𝑲𝒋,𝒊=𝟏 Efly(oi)+ Efly(ij)+ Eswap + Efly(jo(min)))                   (6)
-C1: ti=tio, where t(oi) = ⅆ𝒐𝒊𝒗𝒎𝒂𝒙                                           (6(a))
-C2: ti +ts≤ te (6(b))
-C3: Etotal(consumed) ≤ Eres, (6(c))
-Where, Eres is the residual energy of the battery at the time of flying from Ho.
-C1: The time stipulated for the UAV to reach a particular node should be the same as the time taken by H-UAV to fly over the targeted node, inferring minimum time loss at the node, since hovering energy is assumed to be negligible.
-C2: The time is taken by phase I: Target flight and phase II: Swapping flight should be less than exhaustion time of UAV, else the UAV would be dead before swapping.
-C3: The total energy consumed in all 3 phases should be less than or equal to the residual energy of H-UAV.
-III. Limitations
+The formulation of the problem with certain constraints are:   
+![Captureguyfh](https://user-images.githubusercontent.com/87405534/126461503-1258f5e4-9c99-4602-95b5-5ca658887bba.PNG)
+
+C1: The time stipulated for the UAV to reach a particular node should be the same as the time taken by H-UAV to fly over the targeted node, inferring minimum time loss at the node, since hovering energy is assumed to be negligible.                    
+C2: The time is taken by phase I: Target flight and phase II: Swapping flight should be less than exhaustion time of UAV, else the UAV would be dead before swapping.             
+C3: The total energy consumed in all 3 phases should be less than or equal to the residual energy of H-UAV.        
+
+## III. Limitations
 This research makes the first attempt to design the dynamic model of battery swapping of UAV in 3-D aerial Highway itself. The proposed approach is modeled with assumptions of no hovering energy in the II phase; swapping flight and linear part of the UAV in its trajectory. In a practical scenario, the pathways would be more complex and in such a case, the assumptions would be denied. Another important speculation is this research is devoted to a serve single UAV via H-UAV.
-IV. Future Research
+
+## IV. Future Research
 The model can be intended for multiple UAVs, that’s swarms of UAVs, in 3-D aerial Highways. It can be made more dynamic when the fleet of H-UAVs co-ordinate their work in aerial Highways with swarms of UAVs. Another way around to further extend the experimentation is when a single H-UAV, serves multiple UAVs in a restricted area in one round journey.
 
