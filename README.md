@@ -7,9 +7,8 @@
 The initial location of the UAV at time (to), at which it sends the signal to the ground station, is represented by 𝑤0=[𝑥𝑤0,𝑦𝑤0,𝑧𝑤0]. It’s flying speed is 𝑣0=[𝑣0(𝑥),𝑣0(𝑦),𝑦0(𝑧)]. te represents the exhaustion time- the time when the UAV would be completely battery dead. we denote the coordinates of UAV at the exhaustion time, 𝑤𝑒=[𝑥𝑤𝑒,𝑦𝑤𝑒,𝑧𝑤𝑒]. Let wi = [𝑥(𝑡𝑘),𝑦(𝑡𝑘),𝑧(𝑡𝑘)] be the coordinates of UAV along its direction (𝑛⃗ ) towards the destination where wi = {w1, w2 ,…,wk}and ti = {t1,t2,….tk} for i={1,2…..,k}.
 ### B. H-UAV
 Vmax, Ho, and ts represent the maximum velocity, initial coordinates and switching/swapping time respectively. Ho would be considered as the frame of reference, 𝐻0=[𝑥ℎ0,𝑦ℎ0,𝑧ℎ0]. H-UAV is docked on the top of the building to ensure the minimum consumption shown in the figure1.
-![Capture](https://user-images.githubusercontent.com/87405534/126458248-1deeded5-fd73-4a13-ac2b-0edaa37bdeac.PNG)
-![Uploading battery swapping.jpg…]()
-C. Trajectory Design Model
+
+### C. Trajectory Design Model
 Targeting the UAV in 3D aerial Highways is critical and maintaining a parallel precision of H-UAV with UAV is highly demanding. The model proposed is stimulated in assumption of a linear trajectory of UAV.
 The UAV’s waypoints or nodes (wi) are estimated on the it’s direction vector (𝑛⃗ ). In reference to initial location of H-UAV the paths are plotted for the trajectory as depicted in the figure2.
 wj = (wi - h(z)) + (vo. ts) 𝑛⃗ , is set of coordinates of H-UAV along the direction of UAV, after swapping the battery, where j={1,2…..,k} and h(z) is the height difference between UAV and H-UAV in 3D Highways while swapping that need to be maintained.
