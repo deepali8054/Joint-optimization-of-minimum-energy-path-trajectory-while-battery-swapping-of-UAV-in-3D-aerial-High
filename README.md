@@ -1,2 +1,3 @@
 # Joint-optimization-of-minimum-energy-path-trajectory-while-battery-swapping-of-UAV-in-3D-aerial-High
 the H-UAV (Helper Unmanned Aerial Vehicle) trajectory to minimize the total energy consumption while completing its mission of battery swapping of UAV (Unmanned Aerial Vehicle) in 3D aerial Highways. Formulation is projected in three phases - I Phase: TF (Target Flight), II phase: SF (Swapping Flight) and III Phase: RF (Return Flight). Within energy budget and minimum time, the optimization is laid out for minimum path trajectory during the flight. The study is carried out targeting a single UAV in 3D highways.
+![Capture](https://user-images.githubusercontent.com/87405534/126458248-1deeded5-fd73-4a13-ac2b-0edaa37bdeac.PNG)
