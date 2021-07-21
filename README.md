@@ -13,9 +13,12 @@ Vmax, Ho, and ts represent the maximum velocity, initial coordinates and switchi
 ### C. Trajectory Design Model          
 Targeting the UAV in 3D aerial Highways is critical and maintaining a parallel precision of H-UAV with UAV is highly demanding. The model proposed is stimulated in assumption of a linear trajectory of UAV. The UAV’s waypoints or nodes (wi) are estimated on the it’s direction vector (𝑛⃗ ). In reference to initial location of H-UAV the paths are plotted for the trajectory as depicted in the figure2.
 
+![Untitled Diagram2](https://user-images.githubusercontent.com/87405534/126459789-ef93b1bc-c35b-4b6e-8576-2b250b8c5960.jpg)
+
 
 wj = (wi - h(z)) + (vo. ts) 𝑛⃗ , is set of coordinates of H-UAV along the direction of UAV, after swapping the battery, where j={1,2…..,k} and h(z) is the height difference between UAV and H-UAV in 3D Highways while swapping that need to be maintained.
-Explanation:
+
+#### Explanation:
 wo and t0 is the initial position and time of UAV, when it sent the signal to the ground station about its battery deficiency, respectively. Objective is to design the minimum time trajectory for the H-UAV to reach the concerned waypoint, determined by Vmax. So, in I Phase-TF (Target Flight), waypoints satisfying t(oi(min))=ti are the concerned waypoints for trajectory
 optimization because if the H-UAV doesn’t make to UAV’s waypoint at the time equal to ti then it won’t be able to catch the UAV(because UAV will move forward). Assume:
 t(o1(min)) >t1
@@ -25,13 +28,11 @@ t(o4(min))=t4,
 t4 onwards the waypoints are the concerned waypoints for calculating the energy.
 So, finally the concerned waypoints are:
 W = {w4, w5, w6, w7,…..}
-The other assumption made in due process is that H-UAV is not hovering in the space, implying that the H-UAV has to reach the waypoint(node) in the same time, the UAV takes to reach the node.
-Addressing constraint in II phase-SF (Swapping Flight) ti + ts ≤ te is beneficial, so that the flying and switching time is less than or equal to exhaustion time. So, assume w8, w9, onwards doesn’t satisfy the constraints and eliminated from the concerned nodes. Hence, Minimum energy is estimated on W={w4, w5, w6, w7} and the viable node is set for the mission.
-Figure2
-D. Energy Model
+The other assumption made in due process is that H-UAV is not hovering in the space, implying that the H-UAV has to reach the waypoint(node) in the same time, the UAV takes to reach the node. Addressing constraint in II phase-SF (Swapping Flight) ti + ts ≤ te is beneficial, so that the flying and switching time is less than or equal to exhaustion time. So, assume w8, w9, onwards doesn’t satisfy the constraints and eliminated from the concerned nodes. Hence, Minimum energy is estimated on W={w4, w5, w6, w7} and the viable node is set for the mission.
+
+### D. Energy Model
 The energy consumption of the H-UAV consists of two types: Propulsion(flying) energy consumption and Swapping Energy. The former measures the energy consumed to fly to the target. The later is the mechanical energy consumed by the parts deployed to swap the battery while performing the parallel operation. The power consumption of a rotary-wing UAV flying at velocity is given as:
-𝑃𝑓𝑙𝑌(𝑣)=P0(1 +α1v2) +𝑃1√√1+𝛼22𝜈4−𝛼2𝜈2 +α3ν3
-Where, P0(1 +α1v2) is blade profile power, 𝑃1√√1+𝛼22𝜈4−𝛼2𝜈2 +α3ν3 is Induced power, α3ν3 is parasite power , 𝑃0=𝛿8𝜌𝑠𝐴𝛺3𝑅3, 𝑃1=(1+𝐼)𝑤32⁄√2𝜌𝐴, 𝛼1=3𝛺2𝑅2, 𝛼2=12𝑉𝑅2 and 𝛼3=0.5𝑎0𝜌𝑠𝐴
+
 Blade profile power, parasite power, and induced power are needed to overcome the profile drag of the blades, the fuselage drag, the induced drag of the blades, respectively.
 The flying energy of H-UAV from Ho to wi is given by:
 Efly(oi)=Pfly(Vmax) . t(oi) (1)
